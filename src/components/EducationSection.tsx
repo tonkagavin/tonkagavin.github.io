@@ -8,7 +8,7 @@ export function EducationSection() {
         <div className="border border-[#2a2a2a] rounded p-4 bg-[#1a1a1a]">
           <div className="flex items-start justify-between flex-wrap gap-2 mb-2">
             <h3 className="text-[#00ff00]">North Carolina State University</h3>
-            <span className="text-[#0099ff]">Expected Graduation: Fall 2027</span>
+            <span className="text-[#0099ff]">Expected Graduation Fall 2027 loading..</span>
           </div>
           <p className="text-[#a6e3a1]">Bachelor of Science in Computer Science | Minor in Philosophy & Economics</p>
           <div className="mt-3">
@@ -40,7 +40,11 @@ export function EducationSection() {
             </li>
             <li className="flex items-center gap-2">
               <span className="text-[#00ff00]">✓</span>
-              Certificate of Completion: HTML Fundamentals Course
+              SoloLearn Certificate of Completion: HTML Fundamentals Course
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-[#00ff00]">✓</span>
+              Completed Oracle Cloud Infrastructure Foundations Course
             </li>
           </ul>
         </div>

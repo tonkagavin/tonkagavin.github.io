@@ -82,7 +82,7 @@ export default function App() {
         {/* Footer */}
         <div className="border-t border-[#2a2a2a] pt-4 mt-8">
           <div className="text-[#666] text-sm font-mono text-center">
-            Built with React + TypeScript | © 2025 | NC State University
+            Built with React + TypeScript + Tailwind CSS | © 2025 | Gavin McKay
           </div>
         </div>
       </div>

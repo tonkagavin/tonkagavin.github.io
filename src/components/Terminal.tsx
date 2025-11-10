@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { X, Minus, Maximize2 } from 'lucide-react';
 
 interface TerminalProps {
   children: React.ReactNode;

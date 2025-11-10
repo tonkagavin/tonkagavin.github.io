@@ -3,6 +3,14 @@ import { useState, useEffect } from 'react';
 export function WorkSection() {
   const projects = [
     {
+      name: 'Assistive Gaze Communication (AAC)',
+      type: 'Club Project',
+      courseOrClub: 'NCSU Neurotech',
+      period: 'Fall 2025 - Present',
+      description: 'Developing a real-time gaze and head-pose tracking model to serve as an augmentative and alternative communication (AAC) interface for individuals with severe motor disabilities',
+      techStack: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
+    },
+    {
       name: 'Compressed File Archiver (Snark)',
       type: 'Academic Project',
       courseOrClub: 'C and Software Tools',
@@ -17,6 +25,14 @@ export function WorkSection() {
       period: 'Fall 2024', 
       description: 'Developed a Java-based log management system with a partner, implementing a Map ADT and array-based list for efficient log storage using quicksort and bubblesort',
       techStack: ['Java', 'JUnit', 'Design Patterns']
+    },
+    {
+      name: 'Code Black Website',
+      type: 'Club Project',
+      courseOrClub: 'Code Black',
+      period: 'Fall 2024',
+      description: 'Developed the official organization website using fundamental web technologies to establish an online presence',
+      techStack: ['HTML', 'CSS']
     },
     {
       name: 'Wolf Scheduler',

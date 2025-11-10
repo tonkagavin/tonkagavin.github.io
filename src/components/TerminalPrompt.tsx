@@ -10,7 +10,7 @@ export function TerminalPrompt({ command, delay = 0 }: TerminalPromptProps) {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout> | undefined;
     
     if (delay > 0) {
       timeout = setTimeout(() => {
