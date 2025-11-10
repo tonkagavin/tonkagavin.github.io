@@ -1,3 +1,14 @@
+const ArchLogo = ({ className }: { className?: string }) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="blue" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm-1.5-12.5l-3 6h1.5l1-2h3l1 2h1.5l-3-6h-1.5zm.5 4l1-2 1 2h-2z" />
+  </svg>
+);
+
 export function AboutSection() {
   return (
     <div className="space-y-4 font-mono">
@@ -23,7 +34,7 @@ export function AboutSection() {
           My interests include AI, ML, and software development.
         </p>
         <p>
-          When I'm not coding, you can find me learning new technologies, tinkering with my custom-built PC,
+          When I'm not coding, you can find me learning new technologies, tinkering with my custom-built PC (I run Arch, btw <ArchLogo className="inline-block w-5 h-5 align-text-bottom" />),
           playing basketball, reading, watching movies, or practicing MMA!
         </p>
       </div>
