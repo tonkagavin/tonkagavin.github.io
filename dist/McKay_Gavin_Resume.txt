@@ -1,0 +1,42 @@
+﻿EDUCATION                                                                                                       
+
+North Carolina State University                                 
+Raleigh, NC
+B.S. in Computer Science | Philosophy Minor                                         Expected Graduation December 2027
+Relevant Coursework: Software Fundamentals and Lab, Discrete Math, C and Software Tools, Data Structures & Algorithms, Automata & Languages
+ACADEMIC EXPERIENCE 
+Compressed File Archiver (Snark) – C and Software Tools                                                
+* Developed a C-based command-line program to create and extract files from a custom-format compressed archive, similar to tar or zip.
+* Implemented file compression logic to reduce archive size and managed all file I/O operations.
+User Activity Log – Data Structures & Algorithms
+* Developed a Java-based log management system with a partner, implementing a Map ADT and array-based list for efficient log storage.
+* Applied quicksort and bubble sort to generate sorted reports.
+* Utilized Singleton and Strategy design patterns for centralized management and flexible sorting logic.
+Wolf Scheduler – Software Fundamentals
+* Built a fully functional, custom course scheduling tool in Java.
+* Created JUnit tests for regression testing to ensure bug-free code.
+Backlog Manager – Software Fundamentals
+* Created a Java-based backlog management system to track products with assigned tasks and owners.
+* Implemented exception handling.
+Pack Scheduler – Software Fundamentals Lab
+* Collaborated with a team of programmers to build a Java-based course registration system for students.
+* Developed JUnit tests with the team for integration testing and passed all staff regression testing.
+PERSONAL PROJECTS
+                                                                 
+CageIntel – AI-powered UFC analytics application                                                2025-Present
+* Developed an AI-powered UFC analytics application to predict fight outcomes using machine learning.
+* Built a Python scraper using BeautifulSoup & Requests to create a comprehensive dataset of UFC fight stats, including detailed round-by-round data from ufcstats.com.
+* Trained a PyTorch model on the collected data to forecast winners.
+* Containerizing the full-stack application using Docker to ensure consistent, isolated environments and enable streamlined CI/CD pipeline deployment.
+Password Manager – Python-based password storage application                                2022-2023
+* Created a Python-based password database application using SQL for storage and Python for the full tech stack.
+* Engineered the application to store passwords locally via a hidden folder, encrypted using the SHA-256 algorithm, and accessed via a master password.
+* Implemented a secure password generator for enhanced security.
+Space Invaders – Pygame 64-bit top-down scroller game                                2021-2022
+* Developed a 32-bit game in Python using the Pygame library, reminiscent of Space Invaders.
+* Implemented core game mechanics including different levels, a point system, and an object-oriented death system.
+* Enabled game stats from previous sessions to be saved to a document and accessed at launch.
+SKILLS
+Tools: Git/GitHub, Docker, Oracle DB, MATLAB, MySQL, TensorFlow, PyTorch, Tkinter, pygame, Flask, Tailwind CSS, Selenium, BeautifulSoup, Linux (Ubuntu, Arch, Kali, Debian, CentOS & Fedora (Red hat distro))
+Languages: Python, Java, Javascript, Typescript, C, C#, Bash, SQL, HTML5, CSS3
+Frameworks: React Native,  Django, FastAPI, .NET
