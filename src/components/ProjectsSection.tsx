@@ -7,7 +7,7 @@ export function ProjectsSection() {
       description: 'An AI-powered UFC analysis platform used to predict fight outcomes and analyze fighter performance',
       tech: ['PyTorch', 'BeautifulSoup', 'Requests', 'Pandas', 'Flask'],
       github: null,
-      demo: 'https://youtu.be/poRiRbA5QB0'
+      demo: 'https://mailchi.mp/b93b67b9b840/cageintel-pre-launch-waitlist'
     },
     {
       name: 'space-invaders-game',
