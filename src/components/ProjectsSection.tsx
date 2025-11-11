@@ -25,7 +25,7 @@ export function ProjectsSection() {
     },
     {
       name: 'email-spam-classifier',
-      description: 'A personal project designed for a former employer to classify emails as spam or not spam.',
+      description: 'A personal project designed for a former employer to classify emails as spam or not spam',
       tech: ['Python', 'Requests', 'Tkinter'],
       github: null,
       demo: null

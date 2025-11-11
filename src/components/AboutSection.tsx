@@ -26,7 +26,7 @@ export function AboutSection() {
           <span className="text-[#00ff00]">Location:</span> NC State University | Fayetteville, NC (user's commute location)
         </p>
         <p>
-          <span className="text-[#00ff00]">Idols:</span> My [grand]parents, LeBron, Napoleon, Linus T, Hegel
+          <span className="text-[#00ff00]">Idols:</span> My parents & grandparents, LeBron James, Napoleon Bonaparte, Linus Torvalds, Georg Wilhelm Friedrich Hegel
         </p>
         <p className="mt-4">
           Hello! I'm a passionate software engineer currently studying Computer Science at NC State University. 
