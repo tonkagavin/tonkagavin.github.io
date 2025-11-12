@@ -1,5 +1,5 @@
 import { Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 export function ContactSection() {
@@ -10,12 +10,22 @@ export function ContactSection() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(false);
+    setErrorMessage('');
 
     try {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -26,7 +36,7 @@ export function ContactSection() {
         throw new Error('EmailJS configuration is missing. Please check your environment variables.');
       }
 
-      await emailjs.send(
+      const result = await emailjs.send(
         serviceId,
         templateId,
         {
@@ -37,16 +47,23 @@ export function ContactSection() {
         publicKey
       );
 
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 3000);
+      if (result.status === 200) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      } else {
+        throw new Error(`EmailJS returned status ${result.status}`);
+      }
     } catch (err) {
       console.error('Failed to send email:', err);
+      const errorMsg = err instanceof Error ? err.message : 'Unknown error occurred';
+      setErrorMessage(errorMsg);
       setError(true);
       setTimeout(() => {
         setError(false);
+        setErrorMessage('');
       }, 5000);
     } finally {
       setIsSubmitting(false);
@@ -112,7 +129,10 @@ export function ContactSection() {
           ) : error ? (
             <div className="text-center py-8">
               <div className="text-red-400 mb-2">✗ Failed to send message</div>
-              <div className="text-[#666] text-sm">Please try again or contact me directly via email.</div>
+              <div className="text-[#666] text-sm mb-2">{errorMessage || 'Please try again or contact me directly via email.'}</div>
+              {errorMessage.includes('configuration') && (
+                <div className="text-[#666] text-xs mt-2">Check browser console for details.</div>
+              )}
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
