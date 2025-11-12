@@ -1,5 +1,6 @@
 import { Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -8,14 +9,48 @@ export function ContactSection() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+    setError(false);
+
+    try {
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        publicKey
+      );
+
+      setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    } catch (err) {
+      console.error('Failed to send email:', err);
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -74,6 +109,11 @@ export function ContactSection() {
               <div className="text-[#00ff00] mb-2">✓ Message sent successfully!</div>
               <div className="text-[#666] text-sm">I'll get back to you soon.</div>
             </div>
+          ) : error ? (
+            <div className="text-center py-8">
+              <div className="text-red-400 mb-2">✗ Failed to send message</div>
+              <div className="text-[#666] text-sm">Please try again or contact me directly via email.</div>
+            </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -108,9 +148,10 @@ export function ContactSection() {
               </div>
               <button
                 type="submit"
-                className="px-6 py-2 bg-[#00ff00] text-black rounded hover:bg-[#00cc00] transition-colors"
+                disabled={isSubmitting}
+                className="px-6 py-2 bg-[#00ff00] text-black rounded hover:bg-[#00cc00] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           )}
