@@ -16,6 +16,7 @@ export function ContactSection() {
   // Initialize EmailJS on component mount
   useEffect(() => {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    
     if (publicKey) {
       emailjs.init(publicKey);
     }
@@ -43,6 +44,7 @@ export function ContactSection() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
+          time: new Date().toLocaleString()
         },
         publicKey
       );
