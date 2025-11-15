@@ -7,7 +7,7 @@ export function WorkSection() {
       type: 'Club Project',
       courseOrClub: 'NCSU Neurotech',
       period: 'Fall 2025 - Present',
-      description: 'Developing a real-time gaze and head-pose tracking model to serve as an augmentative and alternative communication (AAC) interface for individuals with severe motor disabilities',
+      description: 'Developed a grid-based, switch-accessible Augmentative and Alternative Communication (AAC) application for non-verbal children with severe motor impairments, enabling communication through personalized visual widgets and scanning technology',
       techStack: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
     },
     {
