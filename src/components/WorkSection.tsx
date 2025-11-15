@@ -7,7 +7,7 @@ export function WorkSection() {
       type: 'Club Project',
       courseOrClub: 'NCSU Neurotech',
       period: 'Fall 2025 - Present',
-      description: 'Developed a grid-based, switch-accessible Augmentative and Alternative Communication (AAC) application for non-verbal children with severe motor impairments, enabling communication through personalized visual widgets and scanning technology',
+      description: 'Developing a grid-based, switch-accessible Augmentative and Alternative Communication (AAC) application for non-verbal children with severe motor impairments, enabling communication through personalized visual widgets and scanning technology',
       techStack: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
     },
     {
