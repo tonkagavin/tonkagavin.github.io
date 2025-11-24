@@ -15,7 +15,7 @@ export function WorkSection() {
       type: 'Club Project',
       courseOrClub: 'NCSU Neurotech',
       period: 'Fall 2025',
-      description: 'Responsible for creation of the club website as well as domain registration and handling',
+      description: 'Responsible for creation of the club website implementing modern web design techniques as well as domain registration and handling',
       techStack: ['React, Typescript, Tailwind CSS, HTML, DNS']
     },
     {
