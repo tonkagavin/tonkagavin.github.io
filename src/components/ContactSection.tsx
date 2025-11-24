@@ -85,10 +85,11 @@ export function ContactSection() {
             className="flex items-center gap-3 p-4 border border-[#2a2a2a] rounded bg-[#1a1a1a] hover:border-[#00ff00] transition-colors group"
           >
             <Mail className="w-5 h-5 text-[#00ff00]" />
-            <div>
+            <div className="flex-1">
               <div className="text-[#00ff00] text-sm">Email</div>
               <div className="text-[#e0e0e0] text-xs">gavinmckay2022@gmail.com</div>
             </div>
+            <ExternalLink className="w-3 h-3 text-[#666] group-hover:text-[#00ff00]" />
           </a>
           
           <a 

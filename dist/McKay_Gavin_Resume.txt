@@ -2,7 +2,7 @@
 
 North Carolina State University                                 
 Raleigh, NC
-B.S. in Computer Science | Philosophy Minor                                         Expected Graduation December 2027
+B.S. in Computer Science | Philosophy Minor                                         Expected Graduation December 2026
 Relevant Coursework: Software Fundamentals and Lab, Discrete Math, C and Software Tools, Data Structures & Algorithms, Automata & Languages
 ACADEMIC EXPERIENCE 
 Compressed File Archiver (Snark) – C and Software Tools                                                

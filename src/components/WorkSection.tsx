@@ -11,6 +11,14 @@ export function WorkSection() {
       techStack: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
     },
     {
+      name: 'Neurotech Website',
+      type: 'Club Project',
+      courseOrClub: 'NCSU Neurotech',
+      period: 'Fall 2025',
+      description: 'Responsible for creation of the club website as well as domain registration and handling',
+      techStack: ['React, Typescript, Tailwind CSS, HTML, DNS']
+    },
+    {
       name: 'Compressed File Archiver (Snark)',
       type: 'Academic Project',
       courseOrClub: 'C and Software Tools',
