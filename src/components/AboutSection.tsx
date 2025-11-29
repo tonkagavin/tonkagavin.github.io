@@ -39,7 +39,7 @@ export function AboutSection() {
         </p>
       </div>
       <div className="text-[#666] pt-2">
-        <span className="text-[#00ff00]">Skills:</span> Git/GitHub, Docker, Oracle DB, MySQL, JavaScript, TypeScript, React Native, Node.js, Yarn, Python, Java, C, C#, 
+        <span className="text-[#00ff00]">Skills:</span> Git/GitHub, Docker, Azure, Oracle DB, MySQL, JavaScript, TypeScript, React Native, Node.js, Yarn, Python, Java, C, C#, 
         Linux (Ubuntu, Arch, Kali, Debian, CentOS & Fedora (Red hat distro)), Django, FastAPI, .NET, Flask, HTML, CSS, Tailwind CSS
       </div>
     </div>

@@ -36,6 +36,6 @@ Space Invaders – Pygame 64-bit top-down scroller game                         
 * Implemented core game mechanics including different levels, a point system, and an object-oriented death system.
 * Enabled game stats from previous sessions to be saved to a document and accessed at launch.
 SKILLS
-Tools: Git/GitHub, Docker, Oracle DB, MATLAB, MySQL, TensorFlow, PyTorch, Tkinter, pygame, Flask, Tailwind CSS, Selenium, BeautifulSoup, Linux (Ubuntu, Arch, Kali, Debian, CentOS & Fedora (Red hat distro))
+Tools: Git/GitHub, Docker, Azure, Oracle DB, MATLAB, MySQL, TensorFlow, PyTorch, Tkinter, pygame, Flask, Tailwind CSS, Selenium, BeautifulSoup, Linux (Ubuntu, Arch, Kali, Debian, CentOS & Fedora+Red Hat)
 Languages: Python, Java, Javascript, Typescript, C, C#, Bash, SQL, HTML5, CSS3
 Frameworks: React Native, Node.js ,Yarn, Django, FastAPI, .NET

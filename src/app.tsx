@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Terminal } from './components/Terminal';
 import { TerminalPrompt } from './components/TerminalPrompt';
 import { AboutSection } from './components/AboutSection';
@@ -18,7 +18,16 @@ export default function App() {
     { id: 'contact', label: 'contact.sh', command: './contact.sh' }
   ];
 
-  const [activeTab, setActiveTab] = useState('about');
+  const [activeTab, setActiveTab] = useState(() => {
+    const savedTab = localStorage.getItem('activeTab');
+    if (savedTab && tabs.some(t => t.id == savedTab))
+      return savedTab;
+    return 'about';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('activeTab', activeTab);
+  }, [activeTab]);
 
   const renderContent = () => {
     switch (activeTab) {

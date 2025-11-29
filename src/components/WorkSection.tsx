@@ -7,7 +7,7 @@ export function WorkSection() {
       type: 'Club Project',
       courseOrClub: 'NCSU Neurotech',
       period: 'Fall 2025 - Present',
-      description: 'Developing a grid-based, switch-accessible Augmentative and Alternative Communication (AAC) application for non-verbal children with severe motor impairments, enabling communication through personalized visual widgets and scanning technology',
+      description: 'Developing a grid-based, switch-accessible Augmentative and Alternative Communication (AAC) application for non-verbal children with severe motor impairments, enabling communication through personalized visual widgets and eye tracking technology',
       techStack: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
     },
     {
@@ -15,8 +15,21 @@ export function WorkSection() {
       type: 'Club Project',
       courseOrClub: 'NCSU Neurotech',
       period: 'Fall 2025',
-      description: 'Responsible for creation of the club website implementing modern web design techniques as well as domain registration and handling',
-      techStack: ['React, Typescript, Tailwind CSS, HTML, DNS']
+      description: (
+        <span>
+          Responsible for creation and deploying of the club website implementing modern web design techniques
+          <br />
+          <a 
+            href="https://ncsuneurotech.org" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#0099ff] hover:text-[#00ff00] underline decoration-dotted underline-offset-4 transition-colors"
+          >
+            ncsuneurotech.org
+          </a>
+        </span>
+      ),
+      techStack: ['React', 'Typescript', 'Tailwind CSS', 'HTML', 'DNS Handling', 'Azure']
     },
     {
       name: 'Compressed File Archiver (Snark)',
@@ -39,7 +52,7 @@ export function WorkSection() {
       type: 'Club Project',
       courseOrClub: 'Code Black',
       period: 'Fall 2024',
-      description: 'Developed the official organization website using fundamental web technologies to establish an online presence',
+      description: 'Developed the official organization website using fundamental web technologies to establish an online presence (now down)',
       techStack: ['HTML', 'CSS']
     },
     {
@@ -82,7 +95,7 @@ export function WorkSection() {
     // Show projects after 2 seconds
     const projectsTimer = setTimeout(() => {
       setShowProjects(true);
-    }, 3000);
+    }, 2250);
 
     // Clean up timers when the component unmounts
     return () => {
