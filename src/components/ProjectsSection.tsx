@@ -20,7 +20,7 @@ export function ProjectsSection() {
       name: 'password-manager',
       description: 'Password manager built with SQL database and Python tech stack',
       tech: ['Python', 'MySQL', 'Tkinter'],
-      github: 'https://github.com/tonkagavin/Password-Manager'
+      github: 'https://github.com/tonkagavin/Password-Manager',
       demo: null
     },
     {
