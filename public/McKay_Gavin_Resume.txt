@@ -3,7 +3,7 @@
 North Carolina State University                                 
 Raleigh, NC
 B.S. in Computer Science | Philosophy Minor                                         Expected Graduation December 2026
-Relevant Coursework: Software Fundamentals and Lab, Discrete Math, C and Software Tools, Data Structures & Algorithms, Automata & Languages
+Relevant Coursework: Software Fundamentals and Lab, Discrete Math, Linear Algebra C and Software Tools, Data Structures & Algorithms, Automata & Languages
 ACADEMIC EXPERIENCE 
 Compressed File Archiver (Snark) – C and Software Tools                                                
 * Developed a C-based command-line program to create and extract files from a custom-format compressed archive, similar to tar or zip.
@@ -36,6 +36,6 @@ Space Invaders – Pygame 64-bit top-down scroller game                         
 * Implemented core game mechanics including different levels, a point system, and an object-oriented death system.
 * Enabled game stats from previous sessions to be saved to a document and accessed at launch.
 SKILLS
-Tools: Git/GitHub, Docker, Azure, Oracle DB, MATLAB, MySQL, TensorFlow, PyTorch, Tkinter, pygame, Flask, Tailwind CSS, Selenium, BeautifulSoup, Linux (Ubuntu, Arch, Kali, Debian, CentOS & Fedora+Red Hat)
-Languages: Python, Java, Javascript, Typescript, C, C#, Bash, SQL, HTML5, CSS3
+Tools: Git/GitHub, Docker, Azure, Oracle DB, MATLAB, MySQL, TensorFlow, PyTorch, OpenCV, Tkinter, pygame, Flask, Tailwind CSS, Selenium, BeautifulSoup, Linux (Debian, Arch, Fedora/Red Hat, etc.)
+Languages: Python, Java, Javascript, Typescript, C, C#, Bash, Assembly, SQL, HTML5, CSS3
 Frameworks: React Native, Node.js ,Yarn, Django, FastAPI, .NET

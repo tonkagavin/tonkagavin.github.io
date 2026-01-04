@@ -18,6 +18,7 @@ export function EducationSection() {
               <li>C & Software Tools</li>
               <li>Software Fundamentals & Lab</li>
               <li>Discrete Math</li>
+              <li>Linear Algebra</li>
               <li>Automata, Grammars, and Computability</li>
               <li> Calculus 1, 2, & 3</li>
               <li> Physics 1 & 2</li>
