@@ -13,17 +13,86 @@ export function EducationSection() {
           <p className="text-[#a6e3a1]">Bachelor of Science in Computer Science | Minor in Philosophy & Economics</p>
           <div className="mt-3">
             <p className="text-[#666]">Relevant Coursework:</p>
-            <ul className="list-disc list-inside text-[#e0e0e0] mt-1 space-y-1">
-              <li>Data Structures & Algorithms</li>
-              <li>C & Software Tools</li>
-              <li>Software Fundamentals & Lab</li>
-              <li>Discrete Math</li>
-              <li>Linear Algebra</li>
-              <li>Automata, Grammars, and Computability</li>
-              <li> Calculus 1, 2, & 3</li>
-              <li> Physics 1 & 2</li>
-              <li> Probabilities and Statistics for Engineers </li>
-            </ul>
+            <div className="mt-2 space-y-3">
+              <div className="border border-[#2a2a2a] rounded p-3 bg-[#0f0f0f]">
+                <p className="text-[#666] text-sm mb-2">Computer Science Courses:</p>
+                <ul className="space-y-1 text-[#e0e0e0]">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Data Structures & Algorithms</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>C & Software Tools</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Software Fundamentals & Lab</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Discrete Math</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Automata, Grammars, and Computability</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Concepts and Facilities of Operating Systems for Computer Scientists</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Software Engineering</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Introduction to Artificial Intelligence</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Automated Learning and Data Analysis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Applied Web-based Client-Server Computing</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="border border-[#2a2a2a] rounded p-3 bg-[#0f0f0f]">
+                <p className="text-[#666] text-sm mb-2">Other Courses:</p>
+                <ul className="space-y-1 text-[#e0e0e0]">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Calculus I</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Calculus II</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Calculus III</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Linear Algebra</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Physics I</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Physics II</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00ff00] mt-1">•</span>
+                    <span>Probabilities and Statistics for Engineers</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
