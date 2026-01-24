@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Github, Linkedin, Code, ExternalLink } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -116,6 +116,19 @@ export function ContactSection() {
             <div className="flex-1">
               <div className="text-[#00ff00] text-sm">LinkedIn</div>
               <div className="text-[#e0e0e0] text-xs">/in/gjmckay</div>
+            </div>
+            <ExternalLink className="w-3 h-3 text-[#666] group-hover:text-[#00ff00]" />
+          </a>
+          <a
+            href="https://www.leetcode.com/u/macknastii/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-4 border border-[#2a2a2a] rounded bg-[#1a1a1a] hover:border-[#00ff00] transition-colors group"
+          >
+            <Code className="w-5 h-5 text-[#00ff00]" />
+            <div className="flex-1">
+              <div className="text-[#00ff00] text-sm">LeetCode</div>
+              <div className="text-[#e0e0e0] text-xs">/macknastii</div>
             </div>
             <ExternalLink className="w-3 h-3 text-[#666] group-hover:text-[#00ff00]" />
           </a>

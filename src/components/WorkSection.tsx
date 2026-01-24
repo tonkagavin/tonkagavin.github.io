@@ -3,12 +3,20 @@ import { useState, useEffect } from 'react';
 export function WorkSection() {
   const projects = [
     {
-      name: 'Assistive Gaze Communication (AAC)',
+      name: 'Neural-Logic AAC',
       type: 'Club Project',
       courseOrClub: 'NCSU Neurotech',
       period: 'Fall 2025 - Present',
-      description: 'Developing a grid-based, switch-accessible Augmentative and Alternative Communication (AAC) application for non-verbal children with severe motor impairments, enabling communication through personalized visual widgets and eye tracking technology',
-      techStack: ['Python', 'OpenCV', 'MediaPipe', 'NumPy']
+      description: 'Architected an end-to-end signal processing pipeline to filter raw EEG data and map neural patterns to physical and digital actions, such as mind-controlled gaming and assistive communication',
+      techStack: ['Python', 'OpenCV', 'MediaPipe', 'NumPy', 'PyTorch']
+    },
+    {
+      name: 'CoffeMaker',
+      type: 'Academic Project',
+      courseOrClub: 'Software Engineering Lab',
+      period: 'Spring 2026',
+      description: 'Building a full-stack Java web application for a coffee maker system using Spring Boot and Angular, focusing on layered architecture, automated testing, and collaborative Git workflows',
+      techStack: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'Docker', 'Git', 'JUnit', 'RestAPI']
     },
     {
       name: 'Neurotech Website',
@@ -29,7 +37,7 @@ export function WorkSection() {
           </a>
         </span>
       ),
-      techStack: ['React', 'Typescript', 'Tailwind CSS', 'HTML', 'DNS Handling', 'Azure']
+      techStack: ['React', 'Typescript', 'Tailwind CSS', 'HTML', 'DNS Handling', 'Azure', 'GitHub Pages']
     },
     {
       name: 'Compressed File Archiver (Snark)',

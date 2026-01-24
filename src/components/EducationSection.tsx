@@ -109,7 +109,7 @@ export function EducationSection() {
             </li>
             <li className="flex items-center gap-2">
               <span className="text-[#00ff00]">✓</span>
-              NAFTRACK Computer Systems & Networking certified
+              NAFTRACK Computer Systems & Networking 
             </li>
             <li className="flex items-center gap-2">
               <span className="text-[#00ff00]">✓</span>

@@ -54,8 +54,8 @@ export function ResumeSection() {
         </div>
 
         <div className="text-[#666] text-sm">
-          <p># Last updated: November 2025</p>
-          <p># Format: PDF Size: 136 KB | DocX Size: 13 KB | txt Size: 4 KB</p>
+          <p># Last updated: January 2026</p>
+          <p># Format: PDF Size: 147 KB | DocX Size: 13 KB | txt Size: 5 KB</p>
         </div>
       </div>
     </div>

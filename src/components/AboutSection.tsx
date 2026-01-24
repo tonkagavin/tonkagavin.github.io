@@ -2,7 +2,7 @@ const ArchLogo = ({ className }: { className?: string }) => (
   <svg 
     className={className} 
     viewBox="0 0 24 24" 
-    fill="blue" 
+    fill="#1793d1" // Arch Blue
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm-1.5-12.5l-3 6h1.5l1-2h3l1 2h1.5l-3-6h-1.5zm.5 4l1-2 1 2h-2z" />
@@ -29,18 +29,40 @@ export function AboutSection() {
           <span className="text-[#00ff00]">Idols:</span> LeBron James, Napoleon Bonaparte, Linus Torvalds, Georg Wilhelm Friedrich Hegel
         </p>
         <p className="mt-4">
-          Hello! I'm a passionate software engineer currently studying Computer Science at NC State University. 
-          I specialize in building scalable applications and solving complex problems through code. 
-          My interests include AI, ML, and software development.
+          Hello! I&apos;m a software engineer at NC State specializing in scalable applications and neurotechnology. 
+          I lead software efforts for NC State Neurotech, focusing on bridging the gap between hardware and human-centric AI solutions.
         </p>
         <p>
-          When I'm not coding, you can find me learning new technologies, tinkering with my custom-built PC (I run Arch, btw <ArchLogo className="inline-block w-5 h-5 align-text-bottom" />),
-          playing basketball, reading, watching movies, or practicing MMA!
+          When I&apos;m not coding, you can find me tinkering with my custom-built PC (I run Arch, btw <ArchLogo className="inline-block w-5 h-5 align-text-bottom" />),
+          playing basketball, reading philosophy, or practicing MMA.
         </p>
       </div>
-      <div className="text-[#666] pt-2">
-        <span className="text-[#00ff00]">Skills:</span> Git/GitHub, Docker, Azure, Oracle DB, MySQL, JavaScript, TypeScript, React Native, Node.js, Yarn, Python, Java, C, C#, 
-        Linux (Ubuntu, Arch, Kali, Debian, CentOS & Fedora (Red hat distro)), Django, FastAPI, .NET, Flask, HTML, CSS, Tailwind CSS
+
+      <div className="text-[#00ff00] pt-4">
+        <span className="text-[#0099ff]">$</span> ls -R skills/
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 text-sm">
+        <div>
+          <span className="text-[#00ff00]">languages/</span>
+          <p className="text-[#e0e0e0]">Python, Java, C, C++, C#, JavaScript, TypeScript, SQL, Bash, Assembly, HTML5/CSS3</p>
+        </div>
+        <div>
+          <span className="text-[#00ff00]">ai_and_ml/</span>
+          <p className="text-[#e0e0e0]">TensorFlow, PyTorch, OpenCV, Ollama, ML Algorithms, Data Modeling & Visualization</p>
+        </div>
+        <div>
+          <span className="text-[#00ff00]">frameworks_web/</span>
+          <p className="text-[#e0e0e0]">Angular, React Native, Node.js, Django, FastAPI, Flask, .NET, REST APIs, Tailwind CSS</p>
+        </div>
+        <div>
+          <span className="text-[#00ff00]">devops_infra/</span>
+          <p className="text-[#e0e0e0]">Docker, Kubernetes, Azure, CI/CD, Linux (Arch, Debian, Fedora), Git/GitHub, Oracle DB, MySQL</p>
+        </div>
+        <div className="md:col-span-2">
+          <span className="text-[#00ff00]">technical_engineering/</span>
+          <p className="text-[#e0e0e0]">Software Architecture, OOP, SDLC, Linux System Admin, Testing & QA, Database Design, Command Line Operations</p>
+        </div>
       </div>
     </div>
   );
