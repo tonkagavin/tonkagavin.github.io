@@ -6,9 +6,9 @@ export function WorkSection() {
       location: 'Wilmington, NC',
       period: 'May 2026 - Jul 2026',
       highlights: [
-        'Contributed to VantacaCore, a production SaaS platform used by HOA communities nationwide.',
-        'Built features for a multi-owner migration platform (ASP.NET Core, Azure Functions, React/Vite, PostgreSQL) to convert legacy single-owner records using AI-assisted name resolution and transactional push pipelines.',
-        'Triaged and resolved production issues in legacy .NET services and improved code health by working through full Azure DevOps + SonarQube PR review cycles.'
+        'Contributed to VantacaCore, a production SaaS platform used by HOA communities nationwide',
+        'Built features for a multi-owner migration platform (ASP.NET Core, Azure Functions, React/Vite, PostgreSQL) to convert legacy single-owner records using AI-assisted name resolution and transactional push pipelines',
+        'Triaged and resolved production issues in legacy .NET services and improved code health by working through full Azure DevOps + SonarQube PR review cycles'
       ],
       techStack: ['ASP.NET Core', 'Azure Functions', 'React', 'Vite', 'PostgreSQL', '.NET Framework', 'Azure DevOps', 'SonarQube', 'Agile Development']
     },
@@ -18,10 +18,10 @@ export function WorkSection() {
       location: 'Raleigh, NC',
       period: 'Sep 2025 - Present',
       highlights: [
-        'Lead the software roadmap for BCI projects, coordinating engineers across neurotech applications.',
-        'Design machine learning and signal-processing pipelines to denoise EEG input and classify actionable wave patterns.',
-        'Drive development of a switch-accessible AAC application with eye-tracking support for users with severe motor impairments.',
-        'Coordinate with industry partners on high-fidelity EEG integrations for robotics and neuro-feedback projects.'
+        'Lead the software roadmap for BCI projects, coordinating engineers across neurotech applications',
+        'Design machine learning and signal-processing pipelines to denoise EEG input and classify actionable wave patterns',
+        'Drive development of a switch-accessible AAC application with eye-tracking support for users with severe motor impairments',
+        'Coordinate with industry partners on high-fidelity EEG integrations for robotics and neuro-feedback projects'
       ],
       techStack: ['Python', 'PyTorch', 'OpenCV', 'Signal Processing', 'EEG', 'ML Classification', 'Plan-Driven Development']
     }

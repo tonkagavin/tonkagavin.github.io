@@ -29,7 +29,7 @@ export function AboutSection() {
           <span className="text-[#00ff00]">Idols:</span> LeBron James, Napoleon Bonaparte, Linus Torvalds, Georg Wilhelm Friedrich Hegel
         </p>
         <p className="mt-4">
-          I&apos;m a Computer Science student at NC State building production software and applied AI systems. Currnetly, I am interning as an AI Engineer at Vantaca and contributing to migration tooling for a live SaaS platform.
+          I&apos;m a Computer Science student at NC State building production software and applied AI systems. Currently, I am interning as an AI Engineer at Vantaca and contributing to migration tooling for a live SaaS platform.
         </p>
         <p>
           I also lead software engineering for NC State Neurotech, where I build brain-computer interface applications and assistive tech systems that translate EEG signals into real-time, human-centered interactions.
@@ -39,7 +39,7 @@ export function AboutSection() {
         </p>
         <p>
           When I&apos;m not coding, you can find me tinkering with my custom-built PC (I use Arch btw <ArchLogo className="inline-block w-5 h-5 align-text-bottom" />),
-          playing basketball, reading philosophy, or practicing MMA.
+          playing basketball, watching anime, reading philosophy, or practicing MMA.
         </p>
       </div>
 

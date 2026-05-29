@@ -35,6 +35,10 @@ function tokenize(text: string) {
   return text.match(/\S+\s*/g) ?? [text];
 }
 
+function parseCommandTokens(command: string) {
+  return command.trim().toLowerCase().split(/\s+/).filter(Boolean);
+}
+
 function resolvePath(rawPath: string) {
   if (rawPath === '~') {
     return '~';
@@ -137,20 +141,80 @@ export function TerminalCli({ activeTab, setActiveTab, tabs }: TerminalCliProps)
     el.scrollTop = el.scrollHeight;
   }, [lines, isStreaming]);
 
+  const tokenTransitions = useMemo(() => {
+    const transitionMap = new Map<string, Map<string, number>>();
+
+    for (const command of commandHistory) {
+      const tokens = parseCommandTokens(command);
+      for (let i = 0; i < tokens.length; i += 1) {
+        const key = tokens.slice(0, i).join(' ');
+        const nextToken = tokens[i];
+        if (!transitionMap.has(key)) {
+          transitionMap.set(key, new Map<string, number>());
+        }
+        const bucket = transitionMap.get(key)!;
+        bucket.set(nextToken, (bucket.get(nextToken) ?? 0) + 1);
+      }
+    }
+
+    return transitionMap;
+  }, [commandHistory]);
+
   const prediction = useMemo(() => {
     if (!input) {
       return null;
     }
 
+    const normalizedInput = input.toLowerCase();
+    const endsWithSpace = /\s$/.test(input);
+    const typedTokens = normalizedInput.trim().split(/\s+/).filter(Boolean);
+
+    const chooseMostLikelyToken = (key: string, startsWith = '') => {
+      const bucket = tokenTransitions.get(key);
+      if (!bucket) {
+        return null;
+      }
+
+      let winner: string | null = null;
+      let winnerCount = -1;
+      for (const [token, count] of bucket.entries()) {
+        if (startsWith && !token.startsWith(startsWith)) {
+          continue;
+        }
+        if (count > winnerCount) {
+          winner = token;
+          winnerCount = count;
+        }
+      }
+      return winner;
+    };
+
+    if (endsWithSpace) {
+      const key = typedTokens.join(' ');
+      const nextWord = chooseMostLikelyToken(key);
+      if (nextWord) {
+        return `${input}${nextWord}`;
+      }
+    } else if (typedTokens.length) {
+      const partialWord = typedTokens[typedTokens.length - 1];
+      const key = typedTokens.slice(0, -1).join(' ');
+      const completion = chooseMostLikelyToken(key, partialWord);
+      if (completion && completion !== partialWord) {
+        const prefix = typedTokens.slice(0, -1).join(' ');
+        return prefix ? `${prefix} ${completion}` : completion;
+      }
+    }
+
+    // Fallback to most recent full-command prefix match.
     for (let index = commandHistory.length - 1; index >= 0; index -= 1) {
       const candidate = commandHistory[index];
-      if (candidate.startsWith(input) && candidate !== input) {
+      if (candidate.toLowerCase().startsWith(normalizedInput) && candidate !== input) {
         return candidate;
       }
     }
 
     return null;
-  }, [commandHistory, input]);
+  }, [commandHistory, input, tokenTransitions]);
 
   const predictionRemainder = prediction ? prediction.slice(input.length) : '';
 

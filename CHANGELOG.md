@@ -42,6 +42,27 @@ This file now uses dated entries, including historical notes derived from reposi
   - enhanced project highlights and resume stats
 - Standardized links to open in new tabs where applicable (`TerminalCli`, `ContactSection`, `ResumeSection`; project/contact social links already used `_blank`).
 - Rewrote `README.md` to document the actual portfolio site instead of Vite template defaults.
+- Refined animation scheduler and visuals in `src/components/AnimatedBackgroundLayer.tsx`:
+  - made Naruto and Sasuke spawn rates balanced/equivalent over time
+  - reduced special clash spawn frequency further to make it much rarer
+  - updated clash sequencing to include explicit run -> jump -> mid-air -> contact -> whiteout flow
+  - made impact flash full solid white on collision
+  - stabilized projectile rendering layer selection to remove flicker/cut-in over terminal UI
+  - added command-trigger support tuning for `doit` and `special`
+- Enhanced CLI autocomplete in `src/components/TerminalCli.tsx`:
+  - upgraded right-arrow/tab predictions to use token transition frequency from command history
+  - added token-aware next-word completion behavior (not just raw prefix completion)
+- Updated link behavior across app to consistently open in new tabs where requested.
+- Updated changelog formatting to dated entries and historical timeline notes from available repository history.
+
+### Added
+- Added expanded sprite/effect content in `src/components/AnimatedBackgroundLayer.tsx`:
+  - additional Naruto/Sasuke jump and clash frame sets
+  - dedicated contact frame where Rasengan and Chidori meet
+  - Sasuke visual redesign cues for Akatsuki-style robe and longer darker hair silhouette
+  - Chidori electric shock rendering around Sasuke's hand energy
+  - animated moving flame tongues for Sasuke fireball
+  - theme-aware particle color behavior override so Hackerman mode keeps green background particles
 
 ### Removed
 - Removed deprecated `src/components/CommandInput.tsx`.

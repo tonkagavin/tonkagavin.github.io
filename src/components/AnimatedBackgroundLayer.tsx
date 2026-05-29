@@ -73,8 +73,10 @@ const PIXEL_COLORS: Record<string, string> = {
   w: '#e5e7eb', // highlights
   g: '#67e8f9', // rasengan/chidori glow
   c: '#e0f2fe', // energy core
-  p: '#1d4ed8', // sasuke blue
-  k: '#c4b5fd', // sasuke top
+  p: '#05070d', // sasuke hair (long/black)
+  k: '#0a0b10', // akatsuki robe base
+  q: '#b91c1c', // akatsuki cloud red
+  u: '#fecaca', // cloud outline/highlight
   n: '#0b0b0f', // amaterasu black flames
 };
 
@@ -157,54 +159,57 @@ const SASUKE_FRAMES = [
   [
     '................',
     '................',
-    '........ppp.....',
-    '.......ppwpp....',
-    '......ppsss.....',
-    '....ggcssss.....',
-    '....gccssss.....',
-    '....kkkbbbb.....',
-    '...kkkbbbbbb....',
-    '..kkkbbbbbbb....',
-    '...bbb..bbb.....',
-    '..bbb....bbb....',
-    '..bb......bb....',
-    '...b......b.....',
+    '.......ppppp....',
+    '......pppwppp...',
+    '......ppssssp...',
+    '....ggcsssspp...',
+    '....gccsssspp...',
+    '....kkkkkkkk....',
+    '...kkqkuqqkkk...',
+    '..kkkquqkqqkk...',
+    '...kkqkqqkqkk...',
+    '..bbb..kkk..bb..',
+    '.bbb....k....bb.',
+    '..bb....k....bb.',
+    '...b.........b..',
     '................',
     '................',
   ],
   [
     '................',
     '................',
-    '.........ppp....',
-    '........ppwpp...',
-    '.......ppsss....',
-    '.....ggcssss....',
-    '.....gccssss....',
-    '....kkkbbbbb....',
-    '...kkkbbbbbbb...',
-    '..kkkbbbbbbbb...',
-    '...bbb...bbb....',
-    '..bbb.....bbb...',
-    '...bb.....bb....',
-    '....b.....b.....',
+    '........ppppp...',
+    '.......pppwppp..',
+    '......ppsssspp..',
+    '.....ggcsssspp..',
+    '.....gccsssspp..',
+    '....kkkkkkkkk...',
+    '...kkqkuqqkkk...',
+    '..kkkquqkqqkk...',
+    '...kkqkqqkqkk...',
+    '..bbb...kkk..bb.',
+    '.bbb.....k...bb.',
+    '..bb.....k...bb.',
+    '...b.........b..',
     '................',
     '................',
   ],
   [
     '................',
     '................',
-    '........pppp....',
-    '.......ppwpp....',
-    '.......ppsss....',
-    '....ggcssss.....',
-    '....gccssss.....',
-    '...kkkbbbbb.....',
-    '..kkkbbbbbbbb...',
-    '...kkbbbbbbbb...',
-    '....bbb..bbb....',
-    '...bbb....bbb...',
-    '..bb.......bb...',
-    '...b........b...',
+    '.......pppppp...',
+    '......pppwpppp..',
+    '......ppsssspp..',
+    '....ggcsssspp...',
+    '....gccsssspp...',
+    '...kkkkkkkkkk...',
+    '..kkkqkuqqkkk...',
+    '...kkquqkqqkk...',
+    '..kkkqkqqkqkk...',
+    '.bbb....kkk..bb.',
+    '..bb......k..bb.',
+    '..bb......k...b.',
+    '...b..........b.',
     '................',
     '................',
   ],
@@ -253,37 +258,39 @@ const SASUKE_CLASH_JUMP_FRAMES = [
   [
     '................',
     '................',
-    '........ppp.....',
-    '.......ppwpp....',
-    '......ppsss.....',
-    '....ggcssss.....',
-    '....gccssss.....',
-    '....kkkbbbb.....',
-    '...kkkbbbbbb....',
-    '..kkkbbbbbbb....',
-    '...bbb..bbb.....',
-    '..bbb...bbb.....',
-    '...bb...bb......',
-    '....bb.bb.......',
-    '.....bbb........',
+    '.......ppppp....',
+    '......pppwppp...',
+    '......ppssssp...',
+    '....ggcsssspp...',
+    '....gccsssspp...',
+    '....kkkkkkkk....',
+    '...kkqkuqqkkk...',
+    '..kkkquqkqqkk...',
+    '...kkqkqqkqkk...',
+    '..bbb..kkk..bb..',
+    '...bb...k..bb...',
+    '....bb....bb....',
+    '.....bb..bb.....',
+    '......bbbb......',
     '................',
   ],
   [
     '................',
     '................',
-    '........ppp.....',
-    '.......ppwpp....',
-    '......ppsss.....',
-    '....ggcssss.....',
-    '....gccssss.....',
-    '....kkkbbbb.....',
-    '...kkkbbbbbb....',
-    '..kkkbbbbbbb....',
-    '...bbb..bbb.....',
-    '....bb..bb......',
-    '.....bb.bb......',
-    '......bbb.......',
-    '.......bb.......',
+    '.......ppppp....',
+    '......pppwppp...',
+    '......ppssssp...',
+    '....ggcsssspp...',
+    '....gccsssspp...',
+    '....kkkkkkkk....',
+    '...kkqkuqqkkk...',
+    '..kkkquqkqqkk...',
+    '...kkqkqqkqkk...',
+    '..bbb..kkk..bb..',
+    '....bb..k..bb...',
+    '.....bb...bb....',
+    '......bb.bb.....',
+    '.......bbb......',
     '................',
   ],
 ] as const;
@@ -310,19 +317,58 @@ const NARUTO_CLASH_AIR_FRAME = [
 const SASUKE_CLASH_AIR_FRAME = [
   '................',
   '................',
-  '........pppp....',
-  '.......ppwpp....',
-  '.......ppsss....',
-  '....ggcssss.....',
-  '....gccssss.....',
-  '...kkkbbbbb.....',
-  '..kkkbbbbbbbb...',
-  '...kkbbbbbbbb...',
-  '....bbb..bbb....',
-  '...bbb...bbb....',
-  '....bb...bb.....',
-  '.....bb.bb......',
-  '......bbb.......',
+  '.......pppppp...',
+  '......pppwpppp..',
+  '......ppsssspp..',
+  '....ggcsssspp...',
+  '....gccsssspp...',
+  '...kkkkkkkkkk...',
+  '..kkkqkuqqkkk...',
+  '...kkquqkqqkk...',
+  '..kkkqkqqkqkk...',
+  '.bbb....kkk..bb.',
+  '..bb.....k..bb..',
+  '...bb....k.bb...',
+  '....bb....bb....',
+  '.....bbbbbb.....',
+  '................',
+] as const;
+
+const NARUTO_CLASH_CONTACT_FRAME = [
+  '................',
+  '................',
+  '.........hhh....',
+  '........hhwh....',
+  '.......hhsss....',
+  '.....ggchrrss...',
+  '....ggc...ssss..',
+  '...bbbbooooooo..',
+  '..bbbboooobbbb..',
+  '...bbboooobbbb..',
+  '....b..oooo..bb.',
+  '....bb..o....bb.',
+  '....bb.....bb...',
+  '.....bb...bb....',
+  '......bb.bb.....',
+  '................',
+] as const;
+
+const SASUKE_CLASH_CONTACT_FRAME = [
+  '................',
+  '................',
+  '.......pppppp...',
+  '......pppwpppp..',
+  '......ppsssspp..',
+  '...ggcsssspp....',
+  '..ggc..sssspp...',
+  '..kkkkkkkkkkk...',
+  '.kkkqkuqqkkkk...',
+  '..kkquqkqqkkk...',
+  '.kkkqkqqkqkk....',
+  '..bb..kkkk...bb.',
+  '...bb..k....bb..',
+  '....bb.....bb..',
+  '.....bbbbbbb....',
   '................',
 ] as const;
 
@@ -332,8 +378,8 @@ const ACTION_GAP_MIN = 2800;
 const ACTION_GAP_MAX = 7600;
 const PROJECTILE_GAP_MIN = 9000;
 const PROJECTILE_GAP_MAX = 16000;
-const CLASH_GAP_MIN = 26000;
-const CLASH_GAP_MAX = 46000;
+const CLASH_GAP_MIN = 70000;
+const CLASH_GAP_MAX = 130000;
 
 function randomBetween(min: number, max: number) {
   return min + Math.random() * (max - min);
@@ -455,6 +501,51 @@ function drawEnergyOrb(
   ctx.restore();
 }
 
+function getEnergyCenter(
+  frame: readonly string[],
+  baseX: number,
+  baseY: number,
+  pixelSize: number,
+  flipX: boolean
+) {
+  const anchor = findEnergyAnchor(frame);
+  if (!anchor) {
+    return null;
+  }
+  const frameWidth = frame[0]?.length ?? 0;
+  const anchorX = flipX ? frameWidth - 1 - anchor.x : anchor.x;
+  return {
+    x: baseX + (anchorX + 0.5) * pixelSize,
+    y: baseY + (anchor.y + 0.5) * pixelSize,
+  };
+}
+
+function drawChidoriShocks(
+  ctx: CanvasRenderingContext2D,
+  centerX: number,
+  centerY: number,
+  size: number,
+  ageMs: number
+) {
+  ctx.save();
+  ctx.shadowColor = '#60a5fa';
+  ctx.shadowBlur = size * 0.9;
+  ctx.strokeStyle = '#93c5fd';
+  ctx.lineWidth = Math.max(1.2, size * 0.14);
+  const shocks = 6;
+  for (let i = 0; i < shocks; i += 1) {
+    const base = ageMs * 0.015 + i * ((Math.PI * 2) / shocks);
+    const length = size * (1.1 + 0.45 * Math.sin(ageMs * 0.03 + i));
+    const bend = size * 0.33 * Math.cos(ageMs * 0.02 + i);
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(centerX + Math.cos(base + 0.25) * (length * 0.45), centerY + Math.sin(base) * (length * 0.45));
+    ctx.lineTo(centerX + Math.cos(base - 0.4) * length + bend * 0.15, centerY + Math.sin(base + 0.2) * length);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
 function drawRasenshuriken(
   ctx: CanvasRenderingContext2D,
   x: number,
@@ -505,6 +596,18 @@ function drawFireball(ctx: CanvasRenderingContext2D, x: number, y: number, ageMs
   ctx.beginPath();
   ctx.arc(x, y, size * 0.48, 0, Math.PI * 2);
   ctx.fill();
+
+  // Animated flame tongues for directional/moving fire effect.
+  for (let i = 0; i < 5; i += 1) {
+    const angle = ageMs * 0.012 + i * 1.25;
+    const reach = size * (1.1 + 0.3 * Math.sin(ageMs * 0.03 + i));
+    const fx = x + Math.cos(angle) * reach;
+    const fy = y + Math.sin(angle) * reach;
+    ctx.fillStyle = i % 2 === 0 ? 'rgba(251,146,60,0.85)' : 'rgba(254,215,170,0.7)';
+    ctx.beginPath();
+    ctx.arc(fx, fy, size * 0.28, 0, Math.PI * 2);
+    ctx.fill();
+  }
   ctx.restore();
 }
 
@@ -812,6 +915,22 @@ export function AnimatedBackgroundLayer() {
           '#3b82f6',
           '#93c5fd'
         );
+        const chidoriCenter = getEnergyCenter(
+          currentFrame,
+          runner.x,
+          runner.y,
+          runner.scale,
+          flipX
+        );
+        if (chidoriCenter) {
+          drawChidoriShocks(
+            runnerCtx,
+            chidoriCenter.x,
+            chidoriCenter.y,
+            runner.scale * 1.2,
+            actionTimeMs
+          );
+        }
       }
 
       // Launch projectile after a short buildup in projectile actions.
@@ -878,7 +997,7 @@ export function AnimatedBackgroundLayer() {
       const leftMeetX = width * 0.5 - 14 * clash.scale;
       const rightMeetX = width * 0.5 + 2 * clash.scale;
       const jumpDurationMs = 320;
-      const holdDurationMs = 160;
+      const holdDurationMs = 220;
       const jumpHeight = 34 * clash.scale;
       let jumpProgress = 0;
 
@@ -924,12 +1043,17 @@ export function AnimatedBackgroundLayer() {
       let narutoFrame: readonly string[];
       let sasukeFrame: readonly string[];
       if (clash.phase === 'jump') {
-        const jumpFrameIndex = jumpProgress < 0.5 ? 0 : 1;
-        narutoFrame = NARUTO_CLASH_JUMP_FRAMES[jumpFrameIndex];
-        sasukeFrame = SASUKE_CLASH_JUMP_FRAMES[jumpFrameIndex];
+        if (jumpProgress > 0.72) {
+          narutoFrame = NARUTO_CLASH_AIR_FRAME;
+          sasukeFrame = SASUKE_CLASH_AIR_FRAME;
+        } else {
+          const jumpFrameIndex = jumpProgress < 0.5 ? 0 : 1;
+          narutoFrame = NARUTO_CLASH_JUMP_FRAMES[jumpFrameIndex];
+          sasukeFrame = SASUKE_CLASH_JUMP_FRAMES[jumpFrameIndex];
+        }
       } else if (clash.phase === 'hold' || clash.phase === 'flash') {
-        narutoFrame = NARUTO_CLASH_AIR_FRAME;
-        sasukeFrame = SASUKE_CLASH_AIR_FRAME;
+        narutoFrame = NARUTO_CLASH_CONTACT_FRAME;
+        sasukeFrame = SASUKE_CLASH_CONTACT_FRAME;
       } else {
         narutoFrame = NARUTO_FRAMES[clash.frameIndex];
         sasukeFrame = SASUKE_FRAMES[clash.frameIndex % SASUKE_FRAMES.length];
@@ -938,8 +1062,24 @@ export function AnimatedBackgroundLayer() {
       drawPixelSprite(cCtx, sasukeFrame, clash.rightX, clash.rightY, clash.scale, true);
       drawEnergyOrb(cCtx, narutoFrame, clash.leftX, clash.leftY, clash.scale, false, '#38bdf8', '#7dd3fc');
       drawEnergyOrb(cCtx, sasukeFrame, clash.rightX, clash.rightY, clash.scale, true, '#3b82f6', '#93c5fd');
+      const clashChidoriCenter = getEnergyCenter(
+        sasukeFrame,
+        clash.rightX,
+        clash.rightY,
+        clash.scale,
+        true
+      );
+      if (clashChidoriCenter) {
+        drawChidoriShocks(
+          cCtx,
+          clashChidoriCenter.x,
+          clashChidoriCenter.y,
+          clash.scale * 1.2,
+          actionTimeMs
+        );
+      }
 
-      const leftOrbX = clash.leftX + 10 * clash.scale;
+      // const leftOrbX = clash.leftX + 10 * clash.scale;
       const orbY = clash.leftY + 6 * clash.scale;
       const rightOrbX = clash.rightX + 6 * clash.scale;
       drawAmaterasu(cCtx, rightOrbX, orbY, clash.scale * 0.7);
