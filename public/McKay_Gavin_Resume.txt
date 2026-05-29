@@ -1,37 +1,36 @@
 ﻿EDUCATION                                                                               
 
 North Carolina State University                                                 Raleigh, NC
-B.S. in Computer Science | Philosophy Minor                                         Expected Graduation December 2026
-Relevant Coursework: Software Fundamentals and Lab, Discrete Math, C and Software Tools, Data Structures & Algorithms, Automata & Languages, Software Engineering, Operating Systems, Intro to AI, Automated Learning and Data Analysis, Applied Web-based Client-Server Computing
+B.S. in Computer Science | Philosophy Minor                                         Expected Graduation May 2027
+Relevant Coursework: Software Fundamentals & Lab, Discrete Math, C & Software Tools, Data Structures & Algorithms, Automata & Languages, Software Engineering, Operating Systems, Intro to AI, Automated Learning & Data Analysis
 EXPERIENCE & LEADERSHIP
-Neurotech at NCSU | Lead Software Engineer                                                             Sep 2025-Present
+Vantaca | AI Engineer Intern | Wilmington, NC                                                                        May-July 2026
+* Contributing to VantacaCore – a production SaaS platform powering HOA management for thousands of communities nationwide.
+* Multi-Owner Migration: Contributing to a full-stack migration platform (ASP.NET Core, Azure Functions, React/Vite, PostgreSQL) that converts legacy HOA single-owner records into a multi-owner model using AI-assisted name resolution and a transactional push pipeline.
+* Platform Defect Resolution: Triaged and resolved production bugs in the VantacaCore legacy .NET framework platform – addressing SonarQube code quality gates through full Azure DevOps PR review cycles.
+Neurotech at NCSU | Lead Software Engineer | Raleigh, NC                                            Sep 2025-Present
 * Engineering Leadership: Spearheading the software development roadmap for brain-computer interface (BCI) projects, managing a team of developers to integrate electroencephalogram (EEG) data with real-time applications.
 * Machine Learning & Signal Processing: Designing and implementing machine learning algorithms to filter raw EEG signal noise and classify specific brain-wave patterns to trigger digital and physical actions.
 * Assistive Technology Development: Leading the creation of a grid-based, switch-accessible Augmentative and Alternative Communication (AAC) application utilizing eye-tracking technology for children with severe motor impairments.
 * Hardware Integration: Coordinating with neurotech industry partners to integrate high-fidelity EEG headsets for future-phase projects, including brain-controlled robotics (RC cars) and neuro-feedback gaming environments.
-Code Black |  (Event & Company Outreach Coordinator)                                                              Apr 2024-Dec 2024
-* Corporate Partnerships: Directed outreach initiatives to industry representatives to secure financial sponsorships and recruitment presence for club events.
-* Event Orchestration: Led the planning and execution of the annual Code Black Hackathon and career fair, managing logistics, vendor relations, and participant experience.
-* Strategic Collaboration: Partnered with the Raleigh chapter of Blacks in Technology (BIT) to co-coordinate a collaborative professional event in observance of Black History Month.
-* Career Development: Managed organization and tabling logistics for corporate partners during our career fairs to facilitate networking opportunities for members.
 PROJECTS
                                                                  
-Neural-Logic AAC – Real-time EEG signal processing & AI-powered assistive technology                   2025-Present
-* Architected an end-to-end signal processing pipeline to filter raw EEG data and map neural patterns to physical and digital actions, such as mind-controlled gaming and assistive communication.
-* Engineering a communication interface designed for children with motor impairments, prioritizing low-latency signal-to-text translation.
-CageIntel – AI-powered UFC analytics application                                                           2025-Present
+CogniShift– br41n.io BCI Hackathon (3rd Place) | Raleigh, NC                                                                 April 2026
+* Secured 3rd place and the highest concept grade at the br41n.io BCI hackathon by architecting a system that maps real-time EEG wave data to musical stimuli utilizing Neuropawn headsets and their BrainFlow repository for neural signal interfacing.
+* Collaborated on an end-to-end signal processing pipeline to isolate specific neural frequencies and translate them into interactive audio environments.
+Down Under – cofoundr Hackathon (Most Sustainable Product) | Raleigh, NC                          March 2026
+* Architected a health-tech mobile platform (MVP) designed to alert college-aged women to dangerous drug contraindications between hormonal birth control and common medications. 
+* Integrated NLM RxNav and openFDA drug-label APIs to power medication search, RxCUI-based interaction checks, and supplemental label-derived interaction text in a Node/Express service.
+CageIntel – AI-powered UFC analytics application                                                          2025-Present
 * Built a Python scraper using BeautifulSoup & Requests to create a comprehensive dataset of UFC fight stats, including detailed round-by-round data from ufcstats.com.
 * Trained a PyTorch model on the collected data to forecast winners.
 * Containerizing the full-stack application to ensure consistent, isolated environments and enable CI/CD.
-Compressed File Archiver (Snark) – C & Software Tools Project                                           2025-2025
-* Developed a C-based command-line program to create and extract files from a custom-format compressed archive, similar to tar or zip. 
-* Implemented file compression logic to reduce archive size and managed all file I/O operations.
-Password Manager – Python-based password storage application                                           2022-2023
+Password Manager – Python-based password storage application                                          2022-2023
 * Created a Python-based password database application using MySQL and Python for the full tech stack.
 * Engineered the application to store passwords locally via a hidden folder, encrypted using the SHA-256 algorithm, and accessed via a master password.
 * Implemented a secure password generator for enhanced security.
 SKILLS
-Tools: Git/GitHub, Docker, Ollama, Azure, Oracle DB, Kubernetes, MATLAB, MySQL, TensorFlow, PyTorch, OpenCV, Tkinter, pygame, Flask, Tailwind CSS, Selenium, BeautifulSoup, Linux (Debian, Arch, Fedora/Red Hat)
+Tools: Git/GitHub, Docker, Ollama, Azure, Oracle DB, Kubernetes, MATLAB, MySQL, TensorFlow, PyTorch, OpenCV, Tkinter, pygame, Flask, Tailwind CSS, Selenium, BeautifulSoup, Linux (Debian, Arch, Fedora/Red Hat), Vite, PostgreSQL
 Languages: Python, Java, Javascript, Typescript, HTML5, CSS3,  C, C#, C++, Bash, Assembly, SQL
-Frameworks: React Native, Node.js ,Yarn, Django, FastAPI, RestAPI, .NET, Angular
-Technical Skills: Software Development Lifecycle, OOP, Machine Learning Algorithms, Data Modeling/Visualization, Software Architecture, Testing & QA, Database Design, DevOps, Problem-Solving, Communication,, CI/CD, Server Operations, Linux System Administration, Command Line Operations
+Frameworks: React Native, Node.js,Yarn, Django, FastAPI, RestAPI, .NET, Angular
+Technical Skills: Software Development Lifecycle, OOP, Machine Learning Algorithms, Data Modeling/Visualization, Software Architecture, Testing & QA, Database Design, DevOps, Problem-Solving, Communication,, CI/CD, Server Operations, Linux System Administration, Command Line Operations, Agile development, Plan-driven development

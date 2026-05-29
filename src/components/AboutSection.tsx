@@ -20,20 +20,25 @@ export function AboutSection() {
           <span className="text-[#00ff00]">Name:</span> Gavin McKay
         </p>
         <p>
-          <span className="text-[#00ff00]">Role:</span> Software Engineer
+          <span className="text-[#00ff00]">Role:</span> AI Intern @ Vantaca
         </p>
         <p>
-          <span className="text-[#00ff00]">Location:</span> NC State University | Raleigh, NC
+          <span className="text-[#00ff00]">Location:</span> Wimington, NC
         </p>
         <p>
           <span className="text-[#00ff00]">Idols:</span> LeBron James, Napoleon Bonaparte, Linus Torvalds, Georg Wilhelm Friedrich Hegel
         </p>
         <p className="mt-4">
-          Hello! I&apos;m a software engineer at NC State specializing in scalable applications and neurotechnology. 
-          I lead software efforts for NC State Neurotech, focusing on bridging the gap between hardware and human-centric AI solutions.
+          I&apos;m a Computer Science student at NC State building production software and applied AI systems. Currnetly, I am interning as an AI Engineer at Vantaca and contributing to migration tooling for a live SaaS platform.
         </p>
         <p>
-          When I&apos;m not coding, you can find me tinkering with my custom-built PC (I run Arch, btw <ArchLogo className="inline-block w-5 h-5 align-text-bottom" />),
+          I also lead software engineering for NC State Neurotech, where I build brain-computer interface applications and assistive tech systems that translate EEG signals into real-time, human-centered interactions.
+        </p>
+        <p>
+          Recent highlights include 3rd place (plus highest concept grade) at the br41n.io BCI Hackathon and Most Sustainable Product at cofoundr for a health-tech MVP.
+        </p>
+        <p>
+          When I&apos;m not coding, you can find me tinkering with my custom-built PC (I use Arch btw <ArchLogo className="inline-block w-5 h-5 align-text-bottom" />),
           playing basketball, reading philosophy, or practicing MMA.
         </p>
       </div>
@@ -59,9 +64,9 @@ export function AboutSection() {
           <span className="text-[#00ff00]">devops_infra/</span>
           <p className="text-[#e0e0e0]">Docker, Kubernetes, Azure, CI/CD, Linux (Arch, Debian, Fedora), Git/GitHub, Oracle DB, MySQL</p>
         </div>
-        <div className="md:col-span-2">
+        <div>
           <span className="text-[#00ff00]">technical_engineering/</span>
-          <p className="text-[#e0e0e0]">Software Architecture, OOP, SDLC, Linux System Admin, Testing & QA, Database Design, Command Line Operations</p>
+          <p className="text-[#e0e0e0]">Agile Methodologies, Plan-Driven Development, Software Architecture, OOP, SDLC, Linux System Admin, Testing & QA, Database Design, Command Line Operations</p>
         </div>
       </div>
     </div>

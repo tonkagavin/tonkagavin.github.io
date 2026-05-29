@@ -3,8 +3,22 @@ import { ExternalLink, Github } from 'lucide-react';
 export function ProjectsSection() {
   const projects = [
     {
+      name: 'cognishift',
+      description: 'br41n.io BCI Hackathon project that won 3rd place and highest concept score by mapping real-time EEG activity to adaptive musical stimuli',
+      tech: ['Python', 'BrainFlow', 'Neuropawn', 'Signal Processing'],
+      github: 'https://github.com/tonkagavin/CogniShift.git',
+      demo: null
+    },
+    {
+      name: 'down-under',
+      description: 'cofoundr hackathon MVP that won Most Sustainable Product by helping users identify dangerous medication interactions with hormonal birth control',
+      tech: ['Node.js', 'Express', 'NLM RxNav API', 'openFDA API'],
+      github: 'https://github.com/tonkagavin/DownUnder.git',
+      demo: null
+    },
+    {
       name: 'cageintel',
-      description: 'An AI-powered UFC analysis platform used to predict fight outcomes and analyze fighter performance',
+      description: 'AI-powered UFC analytics platform with automated data collection and modeling to forecast fight outcomes',
       tech: ['PyTorch', 'BeautifulSoup', 'Requests', 'Pandas', 'Flask'],
       github: null,
       demo: 'https://mailchi.mp/b93b67b9b840/cageintel-pre-launch-waitlist'

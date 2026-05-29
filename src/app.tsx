@@ -1,14 +1,22 @@
 import { useState, useEffect } from 'react';
 import { Terminal } from './components/Terminal';
-import { TerminalPrompt } from './components/TerminalPrompt';
 import { AboutSection } from './components/AboutSection';
 import { EducationSection } from './components/EducationSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { WorkSection } from './components/WorkSection';
 import { ResumeSection } from './components/ResumeSection';
 import { ContactSection } from './components/ContactSection';
+import { TerminalCli } from './components/TerminalCli';
+import { EasterEggOverlay } from './components/EasterEggOverlay';
+import { AnimatedBackgroundLayer } from './components/AnimatedBackgroundLayer';
+import { EasterEggProvider } from './context/EasterEggContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { useEscapeListener } from './hooks/useEscapeListener';
 
-export default function App() {
+function AppContent() {
+  useEscapeListener();
+  const { theme } = useTheme();
+
   const tabs = [
     { id: 'about', label: 'about.txt', command: 'cat about.txt' },
     { id: 'education', label: 'education/', command: 'ls education/' },
@@ -53,11 +61,11 @@ export default function App() {
       <div className="space-y-6">
         {/* Welcome Message */}
         <div className="font-mono">
-          <div className="text-[#00ff00] mb-2">
+          <div className="text-[var(--theme-accent)] mb-2">
             Welcome to my Portfolio!
           </div>
-          <div className="text-[#666] text-sm">
-            Type or click on the tabs below to navigate.
+          <div className="text-[var(--theme-text-dim)] text-sm">
+            Type or click on the tabs below to navigate. Active theme: {theme}
           </div>
         </div>
 
@@ -69,8 +77,8 @@ export default function App() {
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-2 rounded font-mono text-sm transition-all ${
                 activeTab === tab.id
-                  ? 'bg-[#00ff00] text-black'
-                  : 'bg-[#2a2a2a] text-[#00ff00] hover:bg-[#3a3a3a] border border-[#3a3a3a]'
+                  ? 'bg-[var(--theme-accent)] text-black'
+                  : 'bg-[var(--theme-shell-border)] text-[var(--theme-accent)] hover:opacity-90 border border-[var(--theme-shell-border)]'
               }`}
             >
               {tab.label}
@@ -78,23 +86,36 @@ export default function App() {
           ))}
         </div>
 
-        {/* Terminal Prompt */}
-        <TerminalPrompt 
-          command={tabs.find(t => t.id === activeTab)?.command || ''} 
-        />
+        <TerminalCli activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs} />
 
         {/* Content Area */}
         <div className="min-h-[400px] pb-8">
-          {renderContent()}
+          <div key={activeTab} className="shell-content-spring">
+            {renderContent()}
+          </div>
         </div>
 
         {/* Footer */}
-        <div className="border-t border-[#2a2a2a] pt-4 mt-8">
-          <div className="text-[#666] text-sm font-mono text-center">
+        <div className="border-t border-[var(--theme-shell-border)] pt-4 mt-8">
+          <div className="text-[var(--theme-text-dim)] text-sm font-mono text-center">
             Built with React + TypeScript + Tailwind CSS | © 2026 | Gavin McKay
           </div>
         </div>
       </div>
     </Terminal>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <EasterEggProvider>
+        <AnimatedBackgroundLayer />
+        <EasterEggOverlay />
+        <div className="relative z-10">
+          <AppContent />
+        </div>
+      </EasterEggProvider>
+    </ThemeProvider>
   );
 }

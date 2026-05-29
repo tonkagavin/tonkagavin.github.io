@@ -82,6 +82,8 @@ export function ContactSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <a 
             href="mailto:gavinmckay2022@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 p-4 border border-[#2a2a2a] rounded bg-[#1a1a1a] hover:border-[#00ff00] transition-colors group"
           >
             <Mail className="w-5 h-5 text-[#00ff00]" />

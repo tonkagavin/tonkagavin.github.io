@@ -8,35 +8,39 @@ export function Terminal({ children }: TerminalProps) {
   const [isMaximized, setIsMaximized] = useState(true);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] p-4 md:p-8 flex items-center justify-center">
-      <div 
-        className={`bg-[#1a1a1a] rounded-lg shadow-2xl border border-[#2a2a2a] transition-all duration-300 ${
-          isMaximized ? 'w-full max-w-7xl' : 'w-full max-w-4xl'
+    <div className="min-h-screen bg-transparent p-4 md:p-8 flex items-center justify-center">
+      <div
+        className={`w-full bg-[var(--theme-shell-bg)] rounded-lg shadow-2xl border border-[var(--theme-shell-border)] shell-spring ${
+          isMaximized ? 'max-w-[1280px]' : 'max-w-[896px] scale-[0.992]'
         }`}
+        style={{ backdropFilter: 'blur(2px)' }}
       >
         {/* Terminal Header */}
-        <div className="bg-[#252525] rounded-t-lg px-4 py-2.5 flex items-center justify-between border-b border-[#2a2a2a]">
+        <div className="bg-[var(--theme-shell-header)] rounded-t-lg px-4 py-2.5 flex items-center justify-between border-b border-[var(--theme-shell-border)]">
           <div className="flex items-center gap-2">
             <div className="flex gap-2">
-              <button 
-                className="w-3 h-3 rounded-full bg-[#ff5f56] hover:bg-[#ff5f56]/80 transition-colors"
+              <button
+                className="w-3 h-3 rounded-full transition-opacity hover:opacity-80"
+                style={{ backgroundColor: 'var(--theme-close)' }}
                 aria-label="Close"
               />
-              <button 
-                className="w-3 h-3 rounded-full bg-[#ffbd2e] hover:bg-[#ffbd2e]/80 transition-colors"
+              <button
+                className="w-3 h-3 rounded-full transition-opacity hover:opacity-80"
+                style={{ backgroundColor: 'var(--theme-minimize)' }}
                 aria-label="Minimize"
               />
-              <button 
+              <button
                 onClick={() => setIsMaximized(!isMaximized)}
-                className="w-3 h-3 rounded-full bg-[#27c93f] hover:bg-[#27c93f]/80 transition-colors"
+                className="w-3 h-3 rounded-full transition-opacity hover:opacity-80"
+                style={{ backgroundColor: 'var(--theme-maximize)' }}
                 aria-label="Maximize"
               />
             </div>
-            <span className="ml-4 text-[#00ff00] text-sm font-mono">
-              portfolio@swe:~$
+            <span className="ml-4 text-[var(--theme-accent)] text-sm font-mono">
+              portfolio@swe:~$ [{isMaximized ? 'max' : 'float'}]
             </span>
           </div>
-          <div className="text-[#666] text-sm font-mono">
+          <div className="text-[var(--theme-text-dim)] text-sm font-mono">
             zsh
           </div>
         </div>
